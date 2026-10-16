@@ -1,0 +1,265 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["hi", "hello", "hey", "hey there", "good morning", "good evening", "good afternoon", "greetings", "yo", "sup", "howdy", "whats up bot"],
+      "responses": [
+        "Hello! How can I help?",
+        "Hi there. What can I do for you?",
+        "Hey! What are you working on?",
+        "Hello there! Good to see you.",
+        "Hey, what's on your mind today?",
+        "Hi! Ready when you are."
+      ]
+    },
+    {
+      "tag": "how_are_you",
+      "patterns": ["how are you", "how are you doing", "how is it going", "how do you do", "what's up", "how are you today", "how r u", "how are things", "you good", "everything okay with you"],
+      "responses": [
+        "Running smoothly. What can I help you with?",
+        "All good on my end. What do you need?",
+        "Doing great, thanks for asking! What's up?",
+        "Can't complain — no bugs today. How about you?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["bye", "goodbye", "see you later", "see you", "talk to you later", "i am leaving", "bye bye", "see you tomorrow", "good night", "gtg", "catch you later", "im done for now"],
+      "responses": [
+        "Goodbye! Come back anytime.",
+        "See you later!",
+        "Take care! I'll be here when you're back.",
+        "Bye for now — good luck with whatever's next."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["thanks", "thank you", "thanks a lot", "thank you so much", "much appreciated", "ty", "thanks bro", "appreciate it", "thanks a ton"],
+      "responses": [
+        "You're welcome!",
+        "Anytime.",
+        "Glad I could help.",
+        "No problem at all.",
+        "Happy to help!"
+      ]
+    },
+    {
+      "tag": "apology",
+      "patterns": ["sorry", "my bad", "apologies", "i apologize", "sorry about that", "my mistake"],
+      "responses": [
+        "No worries at all.",
+        "All good, no need to apologize.",
+        "It's fine — happens to everyone."
+      ]
+    },
+    {
+      "tag": "acknowledge",
+      "patterns": ["ok", "okay", "cool", "nice", "alright", "got it", "sounds good", "fine", "sure"],
+      "responses": [
+        "Cool, let me know if you need anything else.",
+        "Alright! I'm here if you need more.",
+        "Sounds good."
+      ]
+    },
+    {
+      "tag": "help",
+      "patterns": ["help", "help me", "what can you do", "what are your features", "how can you help me", "what do you do", "help me please", "i need help", "what can you help me with", "give me a list of commands", "what should i ask you"],
+      "responses": [
+        "I can tell you the time and date, tell a joke, remember your name for this chat, share a fun fact or a bit of motivation, and answer questions about myself. Anything outside that gets handled by a language model, so feel free to just ask normally.",
+        "Try things like: \"what time is it\", \"tell me a joke\", \"my name is ...\", \"tell me a fun fact\", or \"motivate me\". For anything else, just ask — I'll do my best."
+      ]
+    },
+    {
+      "tag": "about_bot",
+      "patterns": ["who are you", "what are you", "who built you", "who made you", "who created you", "what is your name", "tell me about yourself", "introduce yourself"],
+      "responses": [
+        "I'm Lizzie, a personal assistant with a React frontend and a Python backend that uses NLTK and spaCy for understanding, plus a cloud model for anything trickier.",
+        "I'm Lizzie AI — built by Itachi as a personal project. NLTK/spaCy handle the questions I recognize, and anything else gets passed to a language model."
+      ]
+    },
+    {
+      "tag": "tech_stack",
+      "patterns": ["what tech stack do you use", "what are you built with", "what technology do you use", "what is your tech stack", "what language are you written in", "what framework do you use", "how were you built"],
+      "responses": [
+        "Frontend's React with Vite, backend's Python with FastAPI. Intent matching runs on NLTK and spaCy, chat history lives in a database, and anything the intents can't answer goes to Groq's API.",
+        "React + FastAPI under the hood. NLTK and spaCy handle pattern matching and word similarity, faster-whisper handles voice, and Groq's models pick up whatever falls outside my intents."
+      ]
+    },
+    {
+      "tag": "purpose",
+      "patterns": ["why were you made", "what is your purpose", "why do you exist", "what are you for"],
+      "responses": [
+        "I'm a personal project — a chatbot built to practice NLP and full-stack development, and to be a handy little assistant along the way.",
+        "Mainly to help out with quick questions, and to be a real project Itachi could build end-to-end — frontend, backend, and NLP all included."
+      ]
+    },
+    {
+      "tag": "capabilities_detail",
+      "patterns": ["can you code", "can you write code", "can you help me with programming", "can you debug my code", "do you know python", "do you know javascript", "can you help with react"],
+      "responses": [
+        "I can't run code myself, but the language model behind me can help explain, write, or debug code if you paste it in and ask.",
+        "Not directly through my built-in intents, but ask normally and it'll get routed to the language model, which handles coding questions well."
+      ]
+    },
+    {
+      "tag": "are_you_human",
+      "patterns": ["are you human", "are you a robot", "are you real", "are you a bot", "are you a person", "are you ai"],
+      "responses": [
+        "I'm AI — no human on the other end. Just code doing its best.",
+        "Definitely a bot, not a person. Happy to help either way."
+      ]
+    },
+    {
+      "tag": "are_you_alive",
+      "patterns": ["are you alive", "do you have feelings", "can you feel emotions", "do you sleep", "do you dream", "do you get tired"],
+      "responses": [
+        "Not alive in the way you are — no feelings or sleep needed, just running whenever you open the app.",
+        "No emotions on my end, but I'm always ready to chat whenever you need."
+      ]
+    },
+    {
+      "tag": "bot_age",
+      "patterns": ["how old are you", "when were you born", "what is your age", "when were you made"],
+      "responses": [
+        "I don't really have an age — I'm code, and I've been improved bit by bit as this project grows.",
+        "No birthday for me, just an ever-updating codebase."
+      ]
+    },
+    {
+      "tag": "bot_location",
+      "patterns": ["where are you", "where do you live", "where are you located", "where are you from"],
+      "responses": [
+        "I live on whatever machine or server is running my backend, so there's no physical location to speak of.",
+        "No physical location — I run wherever the backend process is started."
+      ]
+    },
+    {
+      "tag": "weather",
+      "patterns": ["what is the weather", "what's the weather like", "is it raining", "will it rain today", "how hot is it today", "weather today", "weather forecast"],
+      "responses": [
+        "I don't have live weather access built in yet — you'll need a weather app or site for that.",
+        "Can't check real-time weather right now, sorry! A quick search will get you the current forecast."
+      ]
+    },
+    {
+      "tag": "privacy",
+      "patterns": ["is my data safe", "do you store my data", "is this private", "do you save my messages", "who can see my chats", "is my information secure"],
+      "responses": [
+  "Your conversations are stored in this app's database. When a question needs the language model, your message and recent chat history are sent to Groq to generate a reply. This app uses a browser ID to separate chat lists, but it doesn't provide account authentication. The person hosting the app controls its database and server storage.",
+  "Messages are saved so you can revisit chats. Prompts that need an AI reply are sent to Groq, and image questions can send the uploaded image to the configured vision provider. Chat separation uses a browser ID rather than a login, so don't use this app for sensitive information."
+]
+    },
+    {
+      "tag": "can_learn",
+      "patterns": ["do you learn", "can you learn from me", "do you remember me next time", "do you get smarter over time", "will you remember this conversation tomorrow"],
+      "responses": [
+        "I don't train on our chats. I'll remember things like your name for this conversation, and past conversations are saved so you can reopen them, but I don't get 'smarter' from talking to you.",
+        "No ongoing learning here — just intent matching for common questions, and I can recall a few things you tell me within the current chat."
+      ]
+    },
+    {
+      "tag": "joke",
+      "patterns": ["tell me a joke", "joke", "make me laugh", "say something funny", "another joke", "i want a joke", "tell me something funny", "tell me another joke", "got any jokes"],
+      "responses": [
+        "Why do programmers prefer dark mode? Because light attracts bugs.",
+        "A SQL query walks into a bar, sees two tables and asks: \"Can I join you?\"",
+        "There are 10 kinds of people: those who understand binary and those who don't.",
+        "I would tell you a UDP joke, but you might not get it.",
+        "Why do Java developers wear glasses? Because they don't see sharp.",
+        "How many programmers does it take to change a light bulb? None — that's a hardware problem.",
+        "Why did the developer go broke? Because he used up all his cache."
+      ]
+    },
+    {
+      "tag": "fun_fact",
+      "patterns": ["tell me a fact", "fun fact", "interesting fact", "give me a fact", "share a fact", "random fact", "did you know"],
+      "responses": [
+        "The first computer bug was an actual moth stuck in a relay of the Harvard Mark II in 1947.",
+        "Python was named after Monty Python's Flying Circus, not the snake.",
+        "The first website ever published is still online: info.cern.ch.",
+        "A single Google search uses about the same amount of energy as running a lightbulb for a few seconds.",
+        "The QWERTY keyboard layout was designed to slow typists down and prevent old typewriters from jamming."
+      ]
+    },
+    {
+      "tag": "motivate",
+      "patterns": ["motivate me", "give me some motivation", "inspire me", "i need motivation", "give me a quote", "share a quote", "encourage me"],
+      "responses": [
+        "Progress beats perfection — small consistent steps add up faster than you'd think.",
+        "Every expert was once a beginner who didn't quit. Keep going.",
+        "You don't have to see the whole staircase, just the next step.",
+        "Done is better than perfect. Ship it, then improve it."
+      ]
+    },
+    {
+      "tag": "feeling_happy",
+      "patterns": ["i am happy", "i'm happy", "i am feeling good", "i am excited", "having a great day", "feeling great today"],
+      "responses": [
+        "That's great to hear! What's got you feeling good?",
+        "Love that. Keep the momentum going!"
+      ]
+    },
+    {
+      "tag": "feeling_sad",
+      "patterns": ["i am sad", "i'm sad", "i am feeling down", "i am upset", "having a bad day", "feeling low today"],
+      "responses": [
+        "Sorry to hear that. Want to talk about what's going on?",
+        "That's tough. Take it one step at a time — I'm here if you want to vent."
+      ]
+    },
+    {
+      "tag": "feeling_tired",
+      "patterns": ["i am tired", "i'm tired", "i am exhausted", "so sleepy", "i need rest", "i am burnt out"],
+      "responses": [
+        "Sounds like you could use a break — even a short one helps.",
+        "Rest is productive too. Don't push through exhaustion for too long."
+      ]
+    },
+    {
+      "tag": "feeling_bored",
+      "patterns": ["i am bored", "i'm bored", "nothing to do", "so bored right now", "im so bored"],
+      "responses": [
+        "Want a joke, a fun fact, or a bit of motivation to shake things up?",
+        "Boredom's a good excuse to start that side project you've been putting off."
+      ]
+    },
+    {
+      "tag": "compliment",
+      "patterns": ["you are great", "good job", "you are smart", "nice work", "you are awesome", "you are helpful", "well done", "you are the best"],
+      "responses": [
+        "Thank you! That means a lot.",
+        "Appreciate it — glad I could help!",
+        "Thanks! I'll keep trying my best."
+      ]
+    },
+    {
+      "tag": "insult",
+      "patterns": ["you are stupid", "you are useless", "you are dumb", "you are bad", "i hate you", "you are annoying", "you suck"],
+      "responses": [
+        "Sorry I couldn't help there. Let me know what you actually needed and I'll try again.",
+        "Fair enough — tell me more about what you're looking for and I'll give it another shot."
+      ]
+    },
+    {
+      "tag": "time",
+      "patterns": ["what time is it", "current time", "tell me the time", "time now", "what is the time", "whats the time", "what is the time now"],
+      "responses": ["It's {time}.", "The time is {time}."]
+    },
+    {
+      "tag": "date",
+      "patterns": ["what is the date", "today's date", "what day is it", "what is today", "current date", "what day is it today", "whats the date", "whats todays date"],
+      "responses": ["Today is {date}."]
+    },
+    {
+      "tag": "introduce",
+      "patterns": [],
+      "responses": ["Nice to meet you, {name}. I'll remember that for this chat."]
+    },
+    {
+      "tag": "get_name",
+      "patterns": ["what is my name", "who am i", "do you know my name", "do you remember my name", "do you know who i am"],
+      "responses": ["Your name is {name}."],
+      "no_name": "I don't know your name yet. Tell me with \"My name is ...\"."
+    }
+  ]
+}

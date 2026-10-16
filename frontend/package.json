@@ -1,0 +1,24 @@
+{
+  "name": "chatbot-frontend",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "border-beam": "^1.4.1",
+    "metal-fx": "^2.0.11",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-markdown": "^9.0.1",
+    "remark-gfm": "^4.0.0",
+    "thinking-orbs": "^0.3.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^5.4.0"
+  }
+}

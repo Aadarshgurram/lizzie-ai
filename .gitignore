@@ -1,0 +1,27 @@
+# --- secrets: never commit these ---
+.env
+backend/.env
+frontend/.env
+frontend/.env.production
+!*.env.example
+
+# --- python ---
+.venv/
+backend/.venv/
+**/__pycache__/
+*.pyc
+
+# --- local data (regenerated / ephemeral) ---
+backend/chatbot.db
+backend/chatbot.db-journal
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# --- node / build output ---
+frontend/node_modules/
+frontend/dist/
+
+# --- editor / OS cruft ---
+.vscode/
+.DS_Store
+Thumbs.db
