@@ -81,10 +81,12 @@ class Chatbot:
     def __init__(self):
         data = json.loads((Path(__file__).parent / "intents.json").read_text(encoding="utf-8"))
         self.intents = {i["tag"]: i for i in data["intents"]}
+        model = os.environ.get("SPACY_MODEL") or "en_core_web_md"
         try:
-            self.nlp = spacy.load("en_core_web_md", disable=["tagger", "parser", "attribute_ruler", "lemmatizer"])
+            self.nlp = spacy.load(model, disable=["tagger", "parser", "attribute_ruler", "lemmatizer"])
         except OSError as err:
-            raise SystemExit("spaCy model missing. Run: python -m spacy download en_core_web_md") from err
+            raise SystemExit(f"spaCy model missing. Run: python -m spacy download {model}") from err
+        self.use_vectors = self.nlp.vocab.vectors_length > 0  # the small model has no word vectors
 
         entries = [(tag, p) for tag, i in self.intents.items() for p in i["patterns"]]
         token_sets = [key_tokens(p) for _, p in entries]
@@ -119,7 +121,7 @@ class Chatbot:
             # Vector similarity is only trusted when both sides have 2+ content words: the md model
             # shares one vector between many common single words ('yes', 'no', 'time', 'nothing' are
             # all identical), which would report a perfect match between unrelated words.
-            if len(toks) > 1 and len(p_toks) > 1 and doc.vector_norm and p_doc.vector_norm:
+            if self.use_vectors and len(toks) > 1 and len(p_toks) > 1 and doc.vector_norm and p_doc.vector_norm:
                 sim = max(0.0, (doc.similarity(p_doc) - SIM_FLOOR) / (1 - SIM_FLOOR))
             score = max(dice, sim)
             if score > best:
